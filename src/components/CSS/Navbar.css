@@ -1,0 +1,30 @@
+nav {
+    background-color: #f1f7d1;
+    padding: 25px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-links a {
+    padding: 20px;
+    color: #53c9bb;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Varela', sans-serif;
+}
+.logo-contenedor {
+    position: absolute;
+    left: 20px;
+}
+.logo-contenedor img {
+    height: 100px;
+}
+.carrito-contenedor img{
+    position: absolute;
+    height: 50px;
+    right: 20px;
+    top: 20px;
+}
