@@ -1,33 +1,66 @@
 body {
-    margin: 0;
+  margin: 0;
 }
-nav {
-    background-color: #f1f7d1;
-    padding: 25px;
+
+.navbar-custom {
+  background-color: #f1f7d1 !important;
+  height: 100px;
 }
-nav ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.navbar-custom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.nav-links a {
-    padding: 20px;
-    color: #53c9bb;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Varela', sans-serif;
+
+.titulos {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+  font-size: 30px;
+  text-decoration: none;
+  font-family: "Protest Guerrilla", serif;
 }
+
+.nav-link-custom {
+  color: #53c9bb !important;
+}
+
+.nav-link-custom:hover {
+  color: #000000 !important;
+}
+
 .logo-contenedor {
-    position: absolute;
-    left: 20px;
+  position: absolute;
+  left: 20px;
 }
-.logo-contenedor img {
-    height: 100px;
+
+.logo {
+  height: 100px;
 }
-.carrito-contenedor img{
-    position: absolute;
-    height: 50px;
-    right: 20px;
-    top: 20px;
+
+.carrito-contenedor {
+  position: absolute;
+  height: 20px;
+  right: 20px;
+  top: 30px;
+}
+
+.cart-icon {
+  height: 50px;
+}
+
+.carrito-notificacion {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

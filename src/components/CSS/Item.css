@@ -1,0 +1,28 @@
+.item {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #30a7d7; 
+  }
+  
+  .item-image {
+    max-width: 100%;
+    height: auto;
+   align-items: center;
+  }
+  
+  h3, p {
+    margin: 5px 0;
+  }
+p {
+color: #fffff8;
+}
+
+.pokemon-name {
+    color: #212121;
+    text-transform: capitalize; 
+}  

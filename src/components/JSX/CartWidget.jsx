@@ -1,8 +1,13 @@
-import React from 'react'
+import React from "react";
+import "../CSS/Navbar.css";
 
-export const CartWidget = () => {
+const CartWidget = () => {
   return (
-    <div>CartWidget</div>
-  )
-}
-export default CartWidget
+    <div className="cart-widget">
+      <img src="/images/carrito.png" alt="carrito" className="cart-icon" />
+      <span className="carrito-notificacion">0</span> 
+    </div>
+  );
+};
+
+export default CartWidget;

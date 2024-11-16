@@ -1,30 +1,29 @@
-import React from "react";
-import "../CSS/Navbar.css";
-import CartWidget from "./CartWidget";
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
+import CartWidget from './CartWidget'; 
+import '../CSS/Navbar.css';
 
-
-export const Navbar = () => {
+function NavBar() {
   return (
-    <nav>
-      <ul>
-        <li className="logo-contenedor">
-        <img src="/images/logo.jpg" alt="logo"/>
-        </li>
-        <li className="carrito-contenedor">
-          <img src="/images/carrito.png" alt="carrito" />
-        </li>
-        <li className="nav-links">
-          <a href="/index.html">Inicio</a>
-        </li>
-        <li className="nav-links">
-          <a href="/juegos.html">Juegos</a>
-        </li>
-        <li className="nav-links">
-          <a href="/contacto.html">Contacto</a>
-        </li>
-      </ul>
-    </nav>
+    <Navbar className="navbar-custom">
+      <Container>
+        <Navbar.Brand as={Link} to="/" className="logo-contenedor">
+          <img src="/images/logo.jpg" alt="logo" className="logo" />
+        </Navbar.Brand>
+        <Nav className="titulos">
+          <Nav.Link as={Link} to="/" className="nav-link-custom">Inicio</Nav.Link>
+          <Nav.Link as={Link} to="/category/sin-evolucionar" className="nav-link-custom">Sin evolucionar</Nav.Link>
+          <Nav.Link as={Link} to="/category/evolucionado" className="nav-link-custom">Evolucionado</Nav.Link>
+        </Nav>
+        <div className="carrito-contenedor">
+          <CartWidget />
+        </div>
+      </Container>
+    </Navbar>
   );
-};
-export default Navbar;
+}
 
+export default NavBar;
