@@ -6,9 +6,7 @@ import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
 const ItemDetail = ({ item }) => {
-  const alturaEnCm = item.height * 10; 
-  const pesoEnKg = item.weight * 0.1; 
-  // Las medidas de la api estan en hectogramos y decimetros, por lo tanto para modificar estas medidas necesite de estos calculos, esto puede generar algunos problemas de redondeo como ahora mismo tiene Caterpie, Dugtrio y Golduck.//
+ 
 
   return (
     <div className="item">

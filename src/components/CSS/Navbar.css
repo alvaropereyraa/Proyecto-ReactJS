@@ -1,16 +1,6 @@
-body {
-  margin: 0;
-}
-
 .navbar-custom {
   background-color: #f1f7d1 !important;
   height: 100px;
-}
-
-.navbar-custom .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .titulos {
@@ -18,8 +8,9 @@ body {
   left: 50%;
   transform: translateX(-50%);
   top: 50px;
+  display: flex;
+  gap: 20px; 
   font-size: 30px;
-  text-decoration: none;
   font-family: "Protest Guerrilla", serif;
 }
 
@@ -32,7 +23,6 @@ body {
 }
 
 .logo-contenedor {
-  position: absolute;
   left: 20px;
 }
 

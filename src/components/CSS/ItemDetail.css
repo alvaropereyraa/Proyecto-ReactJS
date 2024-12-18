@@ -2,39 +2,11 @@
     text-align: center;
   }
   
-  .item-image {
-    max-width: 100%;
-    height: auto;
-  }
-  
+ 
+ 
+
  
   
-  .pokemon-id {
-    font-weight: bold;
-  }
-  .habilidades {
-    list-style-type: none; 
-    padding: 0;
-  }
   
-  .habilidad {
-    background-color: #7ec2d3; 
-    margin: 5px 0; 
-    padding: 5px;
-    border-radius: 4px; 
-    text-transform: capitalize;
-  }
-  
-  .tipos {
-    padding: 0;
-    list-style-type: none; 
-  }
-  
-  .tipo {
-    text-transform: capitalize;
-    background-color: #cec8c8;
-    margin: 5px 0; 
-    padding: 5px;
-    border-radius: 4px; 
-  }
+ 
   

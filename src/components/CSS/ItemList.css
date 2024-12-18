@@ -1,7 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
+
 .item-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    background-color: #1c1275
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  width: 250px;
+  margin: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #30a7d7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card p {
+  font-size: 1em;
+  color: #f2f2f2;
+  margin: 0 0 15px;
+}
+
+.quantity-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.quantity-controls button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #862222;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.card a:hover {
+  background-color: #333;
+}
+
+.añadir-al-carrito {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background-color: #23d40b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  font-family: 'Roboto', sans-serif; 
+}
+
+.añadir-al-carrito:hover, .detalle-boton:hover  {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+
+.añadir-al-carrito:active,.detalle-boton:active {
+  transform: scale(0.95);
+}
+

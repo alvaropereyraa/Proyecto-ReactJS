@@ -1,23 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; 
-import Button from 'react-bootstrap/Button'; 
+import { Link } from 'react-router-dom';
 import '../CSS/Item.css';
 
 const Item = ({ item }) => {
-  const alturaEnCm = item.height * 10; 
-  const pesoEnKg = item.weight * 0.1; 
-    // Las medidas de la api estan en hectogramos y decimetros, por lo tanto para modificar estas medidas necesite de estos calculos, esto puede generar algunos problemas de redondeo como ahora mismo tiene Caterpie, Dugtrio y Golduck.//
-
   return (
-    <div className="item">
-      <img src={item.sprites.front_default} alt={item.name} className="item-image" />
-      <h3 className='pokemon-name'>{item.name}</h3>
-      <p className='pokemon-id'>Pokédex: N.°{item.id}</p>
-      <p>Altura: {alturaEnCm} cm</p>
-      <p>Peso: {pesoEnKg} kg</p>
-      <Link to={`/item/${item.id}`}>
-        <Button variant="primary">Ver más</Button>
-      </Link>
+    <div className="card">
+      <img src={item.imagen} alt={item.nombre} className="card-img" />
+      <h2>{item.nombre}</h2>
+      <p>{item.descripción}</p> {/* Muestra la descripción */}
+      <p>Precio: {item.precio}</p>
+      <div className="quantity-controls">
+        <button>-</button>
+        <span>1</span>
+        <button>+</button>
+      </div>
+      <Link to={`/item/${item.id}`}>Ver Detalle</Link>
     </div>
   );
 };
