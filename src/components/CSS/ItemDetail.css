@@ -27,37 +27,37 @@
 
 .item-detail.planta-veneno {
   background: linear-gradient(135deg, #78C850 50%, #A040A0 50%);
-  color: #fff; /* Texto en blanco para mejor contraste */
+  color: #fff; 
 }
 
 .item-detail.fuego-volador {
-  background: linear-gradient(135deg, #F08030 50%, #a3d3f9 50%); /* Fuego y Azul Celeste */
-  color: #333; /* Texto en un color oscuro para mejor contraste */
+  background: linear-gradient(135deg, #F08030 50%, #a3d3f9 50%); 
+  color: #333; 
 }
 
 .item-detail.bicho-volador {
   background: linear-gradient(135deg, #A8B820 50%, #A890F0 50%);
-  color: #fff; /* Texto en blanco para mejor contraste */
+  color: #fff; 
 }
 
 .item-detail.bicho-veneno {
   background: linear-gradient(135deg, #A8B820 50%, #A040A0 50%);
-  color: #fff; /* Texto en blanco para mejor contraste */
+  color: #fff; 
 }
 
 .item-detail.fuego {
   background-color: #F08030;
-  color: #fff; /* Texto en blanco para mejor contraste */
+  color: #fff; 
 }
 
 .item-detail.bicho {
   background-color: #A8B820;
-  color: #fff; /* Texto en blanco para mejor contraste */
+  color: #fff; 
 }
 
 .item-detail.agua {
   background-color: #6890F0;
-  color: #fff; /* Texto en blanco para mejor contraste */
+  color: #fff; 
 }
 
 .item-detail-img {
@@ -69,6 +69,7 @@
 }
 
 .sumar {
+  width: 50px;
   background-color: #21e207;
   color: #fff;
   border: none;
@@ -98,7 +99,7 @@
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  align-self: center; /* Asegura que el botón se centre */
+  align-self: center; 
 }
 
 .volver-inicio:hover {

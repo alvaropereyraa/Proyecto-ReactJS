@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
 
+.item-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #000000;
+}
+
 .item-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  padding: 20px;
-  background-color: #000000;
 }
 
 .card {
@@ -91,12 +97,25 @@
   font-family: 'Roboto', sans-serif; 
 }
 
-.añadir-al-carrito:hover, .detalle-boton:hover  {
+.añadir-al-carrito:hover, .detalle-boton:hover {
   background-color: #000000;
   transform: scale(1.05);
 }
 
-.añadir-al-carrito:active,.detalle-boton:active {
+.añadir-al-carrito:active, .detalle-boton:active {
   transform: scale(0.95);
 }
+.filter-dropdown {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
 
+.filter-dropdown select {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,133 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
+
+body {
+  background-color: #dd8383; 
+}
+
+.cart-page {
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-container {
+  max-width: 800px; 
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cart {
-    padding: 20px;
-    background-color: #dd8383;
-    width: 100%;
-    
-  }
-  p {
-    margin: 5px;
-    font-family: 'Roboto', sans-serif; 
-  }
-  h1,h2,h3 {
-    font-family: 'Roboto', sans-serif; 
-  }
-  .cart-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .nombre-compra{
-    margin: 10px;
-  }
-  .cart-item-img {
-    width: 100px;
-    height: auto;
-    margin-right: 10px;
-  }
-  
-  .cart-item h2, .cart-item p {
-    margin: 5px;
-  }
-  
-  .cart-item-controls {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .cart-item-controls button {
-   width: 60px;
-    height: 30px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  
-  
-  .compra-detalles-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .compra-detalles {
-    background: #bcbdc2;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .compra-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .compra-item-img {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-  }
-  
-  .aceptar-compra {
-    background-color: #a0aaa2;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-  }
-  
-  .aceptar-compra:hover {
-    background-color: #218838;
-  }
-  .restar {
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    
-  }
+  width: 100%; 
+}
+
+p {
+  margin: 5px;
+  font-family: 'Roboto', sans-serif; 
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif; 
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  width: 100%; 
+  margin-bottom: 10px;
+}
+
+.nombre-compra {
+  margin: 10px;
+  flex: 1; 
+}
+
+.cart-item-img {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.cart-item h2, .cart-item p {
+  margin: 5px;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0; 
+}
+
+.cart-item-controls button {
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 10px; 
+  margin-top: 20px; 
+}
+
+.compra-detalles-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compra-detalles {
+  background: #bcbdc2;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.compra-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.compra-item-img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.aceptar-compra {
+  background-color: #a0aaa2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.aceptar-compra:hover {
+  background-color: #218838;
+}
+
+.restar {
+  width: 20px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
 .restar:hover, .sumar:hover, .eliminar:hover, .vaciar:hover, .finalizar:hover {
   background-color: #000000;
   transform: scale(1.05);
 }
+
 .restar:active, .sumar:active, .eliminar:active, .vaciar:active, .finalizar:active {
   transform: scale(0.95);
 }
+
 .eliminar {
+  width: 70px;
   background-color: #0d09ce;
   color: white;
   border: none;
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
 }
+
 .vaciar {
   background-color: #0d09ce;
   color: white;
   border: none;
   border-radius: 5px;
   width: 150px;
-  margin: 10px;
   height: 50px;
   font-family: 'Roboto', sans-serif;
 }
+
 .finalizar {
   background-color: #1eb964;
   color: white;
   border: none;
   border-radius: 5px;
   width: 150px;
-  margin: 10px;
   height: 50px;
   font-family: 'Roboto', sans-serif;
 }

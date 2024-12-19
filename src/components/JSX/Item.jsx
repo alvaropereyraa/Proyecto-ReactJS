@@ -8,7 +8,7 @@ const Item = ({ item }) => {
     <div className="card">
       <img src={item.imagen} alt={item.nombre} className="card-img" />
       <h2>{item.nombre}</h2>
-      <p>{item.descripción}</p> {/* Muestra la descripción */}
+      <p>{item.descripción}</p> 
       <p>Precio: {item.precio}</p>
       <div className="quantity-controls">
         <button>-</button>

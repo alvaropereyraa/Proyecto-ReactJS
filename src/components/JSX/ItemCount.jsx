@@ -13,7 +13,7 @@ const ItemCount = ({ item, addToCart }) => {
       <button className='restar' onClick={() => setQuantity(quantity > 1 ? quantity - 1 : 1)}>-</button>
       <span>{quantity}</span>
       <button className='sumar' onClick={() => setQuantity(quantity + 1)}>+</button>
-      <button className="sumar" onClick={handleAddToCart}>Añadir al Carrito</button> 
+      <button className="añadir-al-carrito" onClick={handleAddToCart}>Añadir al Carrito</button> 
     </div>
   );
 };
