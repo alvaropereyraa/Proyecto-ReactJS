@@ -1,0 +1,17 @@
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  button {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #bdbdbd;
+  }
+  

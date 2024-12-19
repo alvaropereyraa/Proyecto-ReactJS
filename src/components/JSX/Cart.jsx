@@ -1,14 +1,39 @@
-import React, { useContext, useState } from 'react';
-import { CartContext } from '../JSX/context/CartContext';
-import '../CSS/Cart.css';
+import React, { useContext, useState } from "react";
+import { CartContext } from "../JSX/context/CartContext";
+import CheckoutForm from "./CheckoutFrom";
+import "../CSS/Cart.css";
+import Swal from "sweetalert2";
 
-const Cart = () => {
-  const { cart, getTotal, clearCart, finalizarCompra, removeFromCart, incrementQuantity, decrementQuantity } = useContext(CartContext);
+const Cart = ({ onClose }) => {
+  const {
+    cart,
+    getTotal,
+    clearCart,
+    finalizarCompra,
+    removeFromCart,
+    incrementQuantity,
+    decrementQuantity,
+  } = useContext(CartContext);
   const [compraDetalles, setCompraDetalles] = useState(null);
+  const [formCompleted, setFormCompleted] = useState(false);
 
   const handleFinalizarCompra = async () => {
-    const idCompra = await finalizarCompra();
-    setCompraDetalles({ idCompra, items: cart, total: getTotal() });
+    if (formCompleted) {
+      const idCompra = await finalizarCompra();
+      setCompraDetalles({ idCompra, items: cart, total: getTotal() });
+    } else {
+      Swal.fire({
+        title: "Error",
+        text: "Por favor complete el formulario de compra.",
+        icon: "error",
+        confirmButtonText: "Aceptar",
+      });
+    }
+  };
+
+  const handleFormSubmit = (formData) => {
+    setFormCompleted(true);
+    handleFinalizarCompra();
   };
 
   const handleAceptar = () => {
@@ -22,22 +47,47 @@ const Cart = () => {
         <>
           {cart.map((item, index) => (
             <div key={index} className="cart-item">
-              <img src={item.imagen} alt={item.nombre} className="cart-item-img" />
+              <img
+                src={item.imagen}
+                alt={item.nombre}
+                className="cart-item-img"
+              />
               <h2>{item.nombre}</h2>
               <p>Precio: {item.precio}</p>
               <p>Cantidad: {item.quantity}</p>
               <p>Subtotal: {item.precio * item.quantity}</p>
               <div className="cart-item-controls">
-                <button onClick={() => decrementQuantity(item.id)}>-</button>
-                <button onClick={() => incrementQuantity(item.id)}>+</button>
-                <button onClick={() => removeFromCart(item.id)}>Eliminar</button>
+                <button
+                  className="restar"
+                  onClick={() => decrementQuantity(item.id)}
+                >
+                  -
+                </button>
+                <button
+                  className="sumar"
+                  onClick={() => incrementQuantity(item.id)}
+                >
+                  +
+                </button>
+                <button
+                  className="eliminar"
+                  onClick={() => removeFromCart(item.id)}
+                >
+                  Eliminar
+                </button>
               </div>
             </div>
           ))}
           <h2>Total: {getTotal()}</h2>
+          <CheckoutForm onFormSubmit={handleFormSubmit} />{" "}
+          {/* Añade el componente CheckoutForm */}
           <div className="cart-buttons">
-            <button onClick={clearCart}>Vaciar Carrito</button>
-            <button onClick={handleFinalizarCompra}>Finalizar Compra</button>
+            <button className="vaciar" onClick={clearCart}>
+              Vaciar Carrito
+            </button>
+            <button className="finalizar" type="submit" form="checkout-form">
+              Finalizar Compra
+            </button>
           </div>
         </>
       ) : (
@@ -52,14 +102,20 @@ const Cart = () => {
             <div className="compra-items">
               {compraDetalles.items.map((item, index) => (
                 <div key={index} className="compra-item">
-                  <img src={item.imagen} alt={item.nombre} className="compra-item-img" />
+                  <img
+                    src={item.imagen}
+                    alt={item.nombre}
+                    className="compra-item-img"
+                  />
                   <h3>{item.nombre}</h3>
                   <p>Cantidad: {item.quantity}</p>
                   <p>Precio: {item.precio}</p>
                 </div>
               ))}
             </div>
-            <button className="aceptar-compra" onClick={handleAceptar}>Aceptar</button>
+            <button className="aceptar-compra" onClick={handleAceptar}>
+              Aceptar
+            </button>
           </div>
         </div>
       )}

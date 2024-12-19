@@ -1,15 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); 
 .cart {
     padding: 20px;
+    background-color: #dd8383;
+    width: 100%;
+    
   }
-  
+  p {
+    margin: 5px;
+    font-family: 'Roboto', sans-serif; 
+  }
+  h1,h2,h3 {
+    font-family: 'Roboto', sans-serif; 
+  }
   .cart-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
   }
-  
+  .nombre-compra{
+    margin: 10px;
+  }
   .cart-item-img {
-    width: 50px;
+    width: 100px;
     height: auto;
     margin-right: 10px;
   }
@@ -20,19 +32,18 @@
   
   .cart-item-controls {
     display: flex;
-    gap: 5px;
+    gap: 10px;
   }
   
   .cart-item-controls button {
-    padding: 5px 10px;
+   width: 60px;
+    height: 30px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
   
-  .cart-buttons {
-    margin-top: 20px;
-  }
+  
   
   .compra-detalles-overlay {
     position: fixed;
@@ -47,7 +58,7 @@
   }
   
   .compra-detalles {
-    background: #fff;
+    background: #bcbdc2;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -66,7 +77,7 @@
   }
   
   .aceptar-compra {
-    background-color: #28a745;
+    background-color: #a0aaa2;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -78,4 +89,45 @@
   .aceptar-compra:hover {
     background-color: #218838;
   }
-  
+  .restar {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    
+  }
+.restar:hover, .sumar:hover, .eliminar:hover, .vaciar:hover, .finalizar:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+.restar:active, .sumar:active, .eliminar:active, .vaciar:active, .finalizar:active {
+  transform: scale(0.95);
+}
+.eliminar {
+  background-color: #0d09ce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+.vaciar {
+  background-color: #0d09ce;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  margin: 10px;
+  height: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+.finalizar {
+  background-color: #1eb964;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  margin: 10px;
+  height: 50px;
+  font-family: 'Roboto', sans-serif;
+}

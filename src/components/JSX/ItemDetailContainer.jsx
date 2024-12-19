@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getProduct } from '../../firebase/db';
 import { CartContext } from '../JSX/context/CartContext';
+import ItemDetail from './ItemDetail';
 import '../CSS/ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
@@ -27,18 +28,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div className="item-detail-overlay">
-      <div className="item-detail">
-        <img src={item.imagen} alt={item.nombre} className="item-detail-img" />
-        <h2>{item.nombre}</h2>
-        <p>{item.description}</p>
-        <p>Precio: {item.precio}</p>
-        <div className="quantity-controls">
-          <button className="sumar" onClick={() => addToCart({ ...item, precio: Number(item.precio), quantity: 1 })}>
-            Añadir al Carrito
-          </button>
-        </div>
-        <button className="volver-inicio" onClick={() => navigate('/')}>Volver al Inicio</button>
-      </div>
+      <ItemDetail item={item} addToCart={addToCart} navigate={navigate} /> 
     </div>
   );
 };

@@ -1,12 +1,106 @@
-.item-detail {
-    text-align: center;
-  }
-  
- 
- 
+.item-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
- 
-  
-  
- 
-  
+.item-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-detail {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.item-detail.planta-veneno {
+  background: linear-gradient(135deg, #78C850 50%, #A040A0 50%);
+  color: #fff; /* Texto en blanco para mejor contraste */
+}
+
+.item-detail.fuego-volador {
+  background: linear-gradient(135deg, #F08030 50%, #a3d3f9 50%); /* Fuego y Azul Celeste */
+  color: #333; /* Texto en un color oscuro para mejor contraste */
+}
+
+.item-detail.bicho-volador {
+  background: linear-gradient(135deg, #A8B820 50%, #A890F0 50%);
+  color: #fff; /* Texto en blanco para mejor contraste */
+}
+
+.item-detail.bicho-veneno {
+  background: linear-gradient(135deg, #A8B820 50%, #A040A0 50%);
+  color: #fff; /* Texto en blanco para mejor contraste */
+}
+
+.item-detail.fuego {
+  background-color: #F08030;
+  color: #fff; /* Texto en blanco para mejor contraste */
+}
+
+.item-detail.bicho {
+  background-color: #A8B820;
+  color: #fff; /* Texto en blanco para mejor contraste */
+}
+
+.item-detail.agua {
+  background-color: #6890F0;
+  color: #fff; /* Texto en blanco para mejor contraste */
+}
+
+.item-detail-img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.sumar {
+  background-color: #21e207;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.sumar:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+
+.sumar:active {
+  transform: scale(0.95);
+}
+
+.tipo {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.volver-inicio {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center; /* Asegura que el botón se centre */
+}
+
+.volver-inicio:hover {
+  background-color: #47b1a6;
+}
